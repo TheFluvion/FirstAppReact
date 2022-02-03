@@ -45,3 +45,5 @@ export default function Home() {
         </>
     )
 }
+
+//componente es una funcion, y elemento es cuando se hace llamado a esa funcion

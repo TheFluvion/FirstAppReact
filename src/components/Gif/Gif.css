@@ -25,7 +25,7 @@
   }
   
   .Gif-buttons {
-    position: absolute;
+    position: flex;
     top: 8px;
     right: 8px;
     z-index: 1;
@@ -37,6 +37,7 @@
     text-decoration: none;
     position: relative;
     width: 100%;
+    max-height: 300px;
   }
   
   .Gif h4 {
