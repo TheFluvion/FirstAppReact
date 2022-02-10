@@ -11,10 +11,9 @@ const fromApiResponseToGifs = apiResponse => {
         return gifs
     }
     return []
-
 }
 
-export default function getGifs({ limit = 5, keyword = 'argentina', page = 0 } = {}) {
+export default function getGifs({ limit = 10, keyword = 'argentina', page = 0 } = {}) {
     const apiUrl = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${ page * limit }&rating=g&lang=en`
                         // offset es cuantos resultados debo saltar para devolverte los correctos sin repetir
     return fetch(apiUrl)

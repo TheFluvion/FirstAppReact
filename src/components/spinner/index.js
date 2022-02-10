@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import image from './../../logo192.png'
+import image from './../../logo192.jpg'
 
 export default function Spinner(){
     return <div className="ring">
