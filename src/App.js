@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <StaticContext.Provider value={{
-      name: 'midudev',
+      name: 'Fluvion',
       suscribete: true
     }
     }>
@@ -30,7 +30,7 @@ export default function App() {
             ></Route>
             <Route
               component={SearchResults}
-              path='/search/:keyword'
+              path='/search/:keyword/:rating?'
             ></Route>
             <Route
               component={Detail}

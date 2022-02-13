@@ -8,8 +8,8 @@ import { Helmet } from 'react-helmet'
 import SearchForm from 'components/SearchForm'
 
 export default function SearchResults({ params }) {
-    const { keyword } = params
-    const { loading, gifs, setPage } = useGifs({ keyword })
+    const { keyword, rating = 'g' } = params
+    const { loading, gifs, setPage } = useGifs({ keyword, rating })
     const externalRef = useRef()
     const { isNearScreen } = useNearScreen({
         externalRef: loading ? null : externalRef,
@@ -36,7 +36,7 @@ export default function SearchResults({ params }) {
                     <title>{title}</title>
                 </Helmet>
                 <header className='ho-header'>
-                    <SearchForm></SearchForm>
+                    <SearchForm initialKeyword={keyword} initialRating={rating}></SearchForm>
                 </header>
                 <h3 className='App-title'>
                     {decodeURI(keyword)}
